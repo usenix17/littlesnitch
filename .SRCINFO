@@ -1,0 +1,18 @@
+pkgbase = littlesnitch
+	pkgdesc = Network monitor that lets you decide which applications may connect (first-party, signature-verified official binary)
+	pkgver = 0
+	pkgrel = 1
+	url = https://obdev.at/littlesnitch-linux
+	install = littlesnitch.install
+	arch = x86_64
+	license = GPL-2.0-only AND LicenseRef-Obdev-Freeware
+	makedepends = cosign
+	makedepends = curl
+	depends = glibc
+	depends = libgcc
+	depends = pam
+	depends = sqlite
+	options = !strip
+	options = !debug
+
+pkgname = littlesnitch

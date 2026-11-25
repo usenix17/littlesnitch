@@ -1,0 +1,12 @@
+post_install() {
+  echo "To start the firewall: systemctl enable --now littlesnitch.service"
+}
+
+post_upgrade() {
+  systemctl daemon-reload || true
+  systemctl try-restart littlesnitch.service || true
+}
+
+pre_remove() {
+  systemctl disable --now littlesnitch.service || true
+}
